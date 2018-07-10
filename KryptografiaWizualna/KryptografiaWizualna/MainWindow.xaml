@@ -1,0 +1,64 @@
+﻿<Window x:Class="KryptografiaWizualna.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KryptografiaWizualna"
+        mc:Ignorable="d"
+        Title="Kryptografia wizualna" Height="309" Width="951">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="256*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,1" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <TabControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.216"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.746"/>
+                </TransformGroup>
+            </TabControl.RenderTransform>
+            <TabItem Header="Ukrywanie obrazu">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Wczytaj obraz" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="147" Click="WczytajObrazCzarnoBialy_Click"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="173,10,0,0" VerticalAlignment="Top" Width="200">
+                        <Image Name="Image1"/>
+                    </Border>
+                    <Button Content="Działaj" HorizontalAlignment="Left" Margin="378,55,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="475,10,0,0" VerticalAlignment="Top" Width="200">
+                        <Image Name="Udzial1Image"/>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="708,10,0,0" VerticalAlignment="Top" Width="200">
+                        <Image Name="Udzial2Image"/>
+                    </Border>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Odczytywanie obrazu">
+                <Grid Background="#FFE5E5E5" Margin="0,0,0,-21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77*"/>
+                        <ColumnDefinition Width="860*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="10,34,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2">
+                        <Image Name="WczytanyUdzial1" />
+                    </Border>
+                    <Button Name="Udzial1Button" Content="Wczytaj udzial 1" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="200" Click="Udzial1Button_Click" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="248.277,34,0,0" VerticalAlignment="Top" Width="200" Grid.Column="1">
+                        <Image Name="WczytanyUdzial2"/>
+                    </Border>
+                    <Button Name="Udzial2Button" Content="Wczytaj udzial 2" HorizontalAlignment="Left" Margin="248.277,9,0,0" VerticalAlignment="Top" Width="200" Click="Udzial2Button_Click" Grid.Column="1"/>
+                    <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="60" Margin="180.277,104,0,0" Stroke="Black" VerticalAlignment="Top" Width="20" Grid.Column="1"/>
+                    <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="20" Margin="162.277,124,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+                    <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="20" Margin="478.277,104,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+                    <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="20" Margin="478.277,129,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+                    <Button Name="PolaczObrazyButton" Content="Działaj" HorizontalAlignment="Left" Margin="453.277,79,0,0" VerticalAlignment="Top" Width="110" Click="PolaczObrazyButton_Click" Grid.Column="1"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="568.277,34,0,0" VerticalAlignment="Top" Width="200" Grid.Column="1">
+                        <Image Name="OdszyfrowanyObraz"/>
+                    </Border>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

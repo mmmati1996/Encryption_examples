@@ -1,0 +1,43 @@
+﻿<Window x:Class="RSA_app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSA_app"
+        mc:Ignorable="d"
+        Title="Algorytm RSA" Height="513" Width="647">
+    <Grid Margin="0,0,-8,0">
+        <Button Name="GenerujKluczeButton" Content="Generuj klucze" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="106" Click="GenerujKluczeButton_Click"/>
+        <Label Content="Klucz publiczny:" HorizontalAlignment="Left" Margin="121,7,0,0" VerticalAlignment="Top"/>
+        <Label Content="Klucz prywatny:" HorizontalAlignment="Left" Margin="121,33,0,0" VerticalAlignment="Top"/>
+        <Label Name="KluczPublicznyLabel" Content="Nie wygenerowany" HorizontalAlignment="Left" Margin="220,7,0,0" VerticalAlignment="Top" Foreground="red"/>
+        <Label Name="KluczPrywatnyLabel" Content="Nie wygenerowany" HorizontalAlignment="Left" Margin="220,33,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Button Name="ZapiszKluczPublicznyButton" Content="Zapisz klucz publiczny" HorizontalAlignment="Left" Margin="336,10,0,0" VerticalAlignment="Top" Width="153" IsEnabled="false" Click="ZapiszKluczPublicznyButton_Click"/>
+        <Button Name="ZapiszKluczPrywatnyButton" Content="Zapisz klucz prywatny" HorizontalAlignment="Left" Margin="336,36,0,0" VerticalAlignment="Top" Width="153" IsEnabled="false" Click="ZapiszKluczPrywatnyButton_Click"/>
+        <Label Content="Zakres liczb pierwszych, od:" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="169"/>
+        <Label Content="do:" HorizontalAlignment="Left" Margin="294,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.778,0.679"/>
+        <TextBox Name="ZakresOD" HorizontalAlignment="Left" Height="23" Margin="169,67,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <TextBox Name="ZakresDO" HorizontalAlignment="Left" Height="23" Margin="321,67,0,0" TextWrapping="Wrap" Text="10000" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="PodglądZmiennych" Content="Podgląd zmiennych" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="106" Click="PodglądZmiennych_Click" IsEnabled="False"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="3" Margin="10,107,0,0" VerticalAlignment="Top" Width="611"/>
+        <Label Content="Tekst jawny" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top"/>
+        <Button Name="WczytajTekstJawny" Content="Wczytaj tekst" HorizontalAlignment="Left" Margin="125,115,0,0" VerticalAlignment="Top" Width="94" Click="WczytajTekstJawny_Click"/>
+        <TextBox Name="TekstJawnyTB" HorizontalAlignment="Left" Height="85" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526"/>
+        <Button x:Name="SzyfrujTekstButton" Content="Szyfruj" HorizontalAlignment="Left" Margin="541,142,0,0" VerticalAlignment="Top" Width="80" Height="86" Click="SzyfrujTekstButton_Click" IsEnabled="False"/>
+        <Label Content="Tekst zaszyfrowany" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="WczytajTekstZaszyfrowany" Content="Wczytaj tekst" HorizontalAlignment="Left" Margin="125,236,0,0" VerticalAlignment="Top" Width="94" Click="WczytajTekstZaszyfrowany_Click"/>
+        <Button x:Name="ZapiszTekstZaszyfrowany" Content="Zapisz tekst" HorizontalAlignment="Left" Margin="224,236,0,0" VerticalAlignment="Top" Width="94" Click="ZapiszTekstZaszyfrowany_Click"/>
+        <Button x:Name="WczytajKluczPubliczny" Content="Wczytaj klucz" HorizontalAlignment="Left" Margin="427,115,0,0" VerticalAlignment="Top" Width="94" Click="WczytajKluczPubliczny_Click"/>
+        <Label Content="Klucz publiczny:" HorizontalAlignment="Left" Margin="323,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.346"/>
+        <Label Name="LabelKluczPubliczny" Content="Niewczytany" HorizontalAlignment="Left" Margin="526,112,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Content="Klucz prywatny:" HorizontalAlignment="Left" Margin="323,233,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.346"/>
+        <Button x:Name="WczytajKluczPrywatny" Content="Wczytaj klucz" HorizontalAlignment="Left" Margin="427,236,0,0" VerticalAlignment="Top" Width="94" Click="WczytajKluczPrywatny_Click"/>
+        <Label x:Name="LabelKluczPrywatny" Content="Niewczytany" HorizontalAlignment="Left" Margin="526,233,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <TextBox x:Name="TekstZaszyfrowanyTB" HorizontalAlignment="Left" Height="85" Margin="10,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526"/>
+        <Button x:Name="DeszyfrujTekstButton" Content="Deszyfruj" HorizontalAlignment="Left" Margin="541,264,0,0" VerticalAlignment="Top" Width="80" Height="86" IsEnabled="False" Click="DeszyfrujTekstButton_Click"/>
+        <Label Content="Tekst odszyfrowany" HorizontalAlignment="Left" Margin="10,354,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ZapiszTekstOdszyfrowany" Content="Zapisz tekst" HorizontalAlignment="Left" Margin="125,360,0,0" VerticalAlignment="Top" Width="94" Click="ZapiszTekstOdszyfrowany_Click"/>
+        <TextBox x:Name="TekstOdszyfrowanyTB" HorizontalAlignment="Left" Height="85" Margin="10,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="526"/>
+        <Button Content="O programie" HorizontalAlignment="Left" Margin="510,10,0,0" VerticalAlignment="Top" Width="111" Height="80" Click="Button_Click"/>
+    </Grid>
+</Window>

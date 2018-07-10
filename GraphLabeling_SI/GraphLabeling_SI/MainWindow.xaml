@@ -1,0 +1,26 @@
+﻿<Window x:Class="GraphLabeling_SI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gv="clr-namespace:Microsoft.Glee.GraphViewerGdi;assembly=Microsoft.Glee.GraphViewerGDI"
+        xmlns:local="clr-namespace:GraphLabeling_SI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="427.632" Width="694.737">
+
+    <Grid>
+        <WindowsFormsHost Name="windowsFormsHost1" Margin="139,0,0,0">
+            <gv:GViewer x:Name="gViewer"></gv:GViewer>
+        </WindowsFormsHost>
+        <Button Content="Label graph" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click" Height="59"/>
+        <Button Name="NewNode" Content="Add new node" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="124" Click="NewNode_Click" Height="52"/>
+        <ComboBox  Name="NodeA" HorizontalAlignment="Left" Margin="69,93,0,0" VerticalAlignment="Top" Width="65" ItemsSource="{Binding NodeList}"/>
+        <Label Content="New edge:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Node A" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="Node B" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="NodeB" HorizontalAlignment="Left" Margin="69,128,0,0" VerticalAlignment="Top" Width="65" ItemsSource="{Binding NodeList}"/>
+        <Button x:Name="NewEdge" Content="Add new edge" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Width="124" Height="52" Click="NewEdge_Click"/>
+        <Button Content="Clear graph" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top" Width="124" Click="Button1_Click" Height="59"/>
+
+    </Grid>
+</Window>

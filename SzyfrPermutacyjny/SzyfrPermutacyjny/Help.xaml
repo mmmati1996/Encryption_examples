@@ -1,0 +1,15 @@
+﻿<Window x:Class="SzyfrPermutacyjny.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzyfrPermutacyjny"
+        mc:Ignorable="d"
+        Title="Help" Height="300" Width="649" WindowStyle="ToolWindow">
+    <Grid Margin="0,0,0,-1">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="215" Width="621"><Run Text="1. "/><Run Text="Wybierz długość klucza - należy wybrać wartość od 1 do 16 (np. 1 oznacza brak zmian)."/><LineBreak/><Run Text="2. Generuj klucz - przycisk generujący losowy klucz (permutacje liczb zależną od długości klucza)."/><LineBreak/><Run Text="3."/><Run Text=" Szyfruj - szyfruje blok tekstu znajdujący się po lewej stronie od przycisku"/><Run Text=" korzystając z wygenerowanego klucza."/><LineBreak/><Run Text="4. D"/><Run Text="eszyfruj - deszyfruje zaszyfrowany blok tekstu "/><Run Text="znajdujący się po lewej stronie od przycisku (środkowy) korzystając z wygenerowanego klucza."/><LineBreak/><Run Text="5. W"/><Run Text="yczyść wszystkie wartości - usuwa wszystkie wpisane teksty, a także klucz (!)."/><LineBreak/><Run Text="----------------------------------------------"/><LineBreak/><Run Text="Dla plików:"/><LineBreak/><Run Text="1. Wczytaj plik - wczytuje zawartość pliku do kolumny &quot;Tekst jawny&quot;."/><LineBreak/><Run Text="2. "/><Run Text="Zapisz klucz - zapisuje klucz do pliku &quot;Klucz&quot;."/><LineBreak/><Run Text="3. Zapisz tekst zaszyfrowany - zapisuje tekst zaszyfrowany do pliku &quot;TekstZaszyfrowany&quot;."/><LineBreak/><Run Text="4. Wczytaj klucz - wczytuje klucz z pliku (np. &quot;Klucz&quot;)."/><LineBreak/><Run Text="5. Wczytaj zaszyfrowany tekst - wczytuje dany tekst z pliku do kolumny &quot;Tekst zaszyfrowany&quot;"/></TextBlock>
+        <Label x:Name="label" Content="Opis działania programu:" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="236" Margin="0,24,0,0" Stroke="Black" VerticalAlignment="Top" Width="631"/>
+
+    </Grid>
+</Window>
