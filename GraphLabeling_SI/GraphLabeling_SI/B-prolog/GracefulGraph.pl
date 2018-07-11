@@ -1,3 +1,5 @@
+% source = www.hakank.org/bprolog//K4P2GracefulGraph2.pl
+
 
 % Just return first possibility or false if cant be graceful.
 go(Graph,M,N) :-
